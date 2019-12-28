@@ -1,0 +1,35 @@
+{
+    "retorno": [{
+            "title": "Titulo 1",
+            "key": "1",
+            "folder": true,
+            "children": [{
+                    "title": "Titulo 1 children",
+                    "key": "2",
+                    "folder": true,
+                    "children": [{
+                            "title": "Titulo 1 children children",
+                            "key": "5",
+                            "folder": false
+                        },
+                        {
+                            "title": "Titulo 2 children children",
+                            "key": "6",
+                            "folder": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Titulo 2 children",
+                    "key": "3",
+                    "folder": true
+                }
+            ]
+        },
+        {
+            "title": "Titulo 2",
+            "key": "4",
+            "folder": true
+        }
+    ]
+}
