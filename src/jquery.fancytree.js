@@ -3797,7 +3797,7 @@
 		 */
 		debugTime: function(label) {
 			if (this.options.debugLevel >= 4) {
-				//window.console.time(this + " - " + label);
+				window.console.time(this + " - " + label);
 			}
 		},
 		/**
@@ -3807,7 +3807,7 @@
 		 */
 		debugTimeEnd: function(label) {
 			if (this.options.debugLevel >= 4) {
-				//window.console.timeEnd(this + " - " + label);
+				window.console.timeEnd(this + " - " + label);
 			}
 		},
 		/**

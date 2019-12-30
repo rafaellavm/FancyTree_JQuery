@@ -13,8 +13,12 @@ $ npm install -g json-server
 
 By adding the -g option we make sure that the package is installed globally on your system."
 
-- Dentro da pasta /js rodar o comando pra levantar o servidor:
+2) Dentro da pasta /js rodar o comando pra levantar o servidor:
 
 $ json-server --watch retorno.json
 
 Esse json é chamado no ajax dentro do código do Fancytree
+
+Pra rodar em uma porta específica:
+
+$ json-server --watch db.json --port 3004

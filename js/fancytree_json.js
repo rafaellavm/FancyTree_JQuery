@@ -5,6 +5,20 @@ $(function () {
 
     // --- Initialize sample trees
     $("#tree").fancytree({
+        /*extensions: ["glyph"],
+        icon: function(event, data){
+            // (Optional dynamic icon definition...)
+          },
+          glyph: {
+            // The preset defines defaults for all supported icon types.
+            // It also defines a common class name that is prepended (in this case 'fa ')
+            preset: "awesome4",
+            map: {
+              // Override distinct default icons here
+              folder: "fa-folder",
+              folderOpen: "fa-folder-open"
+            }
+          },*/
         autoActivate: true, // we use scheduleAction()
         //autoCollapse: true,
         autoFocus: true,
@@ -85,6 +99,8 @@ $(function () {
                 }, "", "#" + (node.data.href || ""));
             }
         },
+        generateIds: true, // Generate id attributes like <span id='fancytree-id-KEY'>
+        idPrefix: "ft_", // Used to generate node idÂ´s like <span id='fancytree-id-<key>'>
         click: function (event, data) {
             // We implement this in the `click` event, because `activate` is not
             // triggered if the node already was active.
@@ -92,7 +108,8 @@ $(function () {
             var node = data.node,
                 orgEvent = data.originalEvent;
 
-            console.log(data.node);
+            console.log(data.node.title);
+            console.log(data.node.data);
 
             // Open href (force new window if Ctrl is pressed)
             if (node.isActive() && node.data.href) {
